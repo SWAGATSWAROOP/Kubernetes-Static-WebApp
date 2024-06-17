@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
-  labels:
-    app: my-api
-  name: my-api
-  namespace: web-app
+metadata: # This metadata is used by the deployment
+  labels: # This label is used by the service to find the pods
+    app: my-api # This label is used by the service to find the pods
+  name: my-api # This name is used by the service to find the pods
+  namespace: web-app # This is the namespace in which the deployment is created
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: my-api
+  replicas: 1 # Number of pods to be created
+  selector: # This selector is used by the deployment to find the pods
+    matchLabels: # This label is used by the deployment to find the pods
+      app: my-api # This label is used by the deployment to find the pods
   template:
-    metadata:
+    metadata: # This metadata is used by the pod
       labels:
         app: my-api
     spec:
       containers:
-        - image: ritesh2000/my-api:latest
-          name: my-api
+        - image: ritesh2000/my-api:latest # Docker image to be used
+          name: my-api # Name of the container
           ports:
-            - containerPort: 5000
+            - containerPort: 5000 # Port on which the container is running
