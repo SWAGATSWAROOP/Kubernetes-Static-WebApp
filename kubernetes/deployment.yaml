@@ -16,7 +16,7 @@ spec:
         app: my-api
     spec:
       containers:
-        - image: swagatswaroop/my-api:latest # Docker image to be used
+        - image: swagatswaroop/ml-score-api:latest # Docker image to be used
           name: my-api # Name of the container
           ports:
             - containerPort: 5000 # Port on which the container is running
