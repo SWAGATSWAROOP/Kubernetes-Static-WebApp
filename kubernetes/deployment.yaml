@@ -16,7 +16,7 @@ spec:
         app: my-api
     spec:
       containers:
-        - image: ritesh2000/my-api:latest # Docker image to be used
+        - image: swagatswaroop/my-api:latest # Docker image to be used
           name: my-api # Name of the container
           ports:
             - containerPort: 5000 # Port on which the container is running

@@ -8,7 +8,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 5000 # Port on which the service is running
+  - port: 4000 # Port on which the service is running
     targetPort: 5000 # Port on which the container is running
   selector:
     app: my-api
